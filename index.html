@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flowstate-  Master your tasks. Orchestrate your workflow.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#C5D7C7]">
+    <div class="heading p-12 leading-[6vh]">
+      <h1 class="space-grotesk font-normal text-6xl text-gray-700">
+        Flowstate
+      </h1>
+      <h2 class="space-grotesk font-light text-[1.5vw] text-gray-700">
+        Master your tasks. Orchestrate your workflow.
+      </h2>
+    </div>
+    <div class="dashboardCard flex justify-start align-middle">
+      <div class="card1 bg-gradient-to-b from-orange-600 to-#C5D7C7 w-[18%] h-[32vh] p-5 ml-[3.1vw] rounded-[8px] shadow-[8px_-7px_12px_rgba(0,0,0,0.25)]">
+        <h1 class="text-2xl space-grotesk ">Total Tasks</h1>
+        <h1 id="totalTasksdash" class="text-[15vh] space-grotesk font-extrabold">0</h1>
+      </div>
+      <div class="card2 bg-gradient-to-b from-red-700 to-#C5D7C7 w-[18%] h-[32vh] p-5 ml-[3.2vw] rounded-[8px] shadow-[8px_-7px_12px_rgba(0,0,0,0.25)]" >
+        <h1 class="text-2xl space-grotesk text-gray-100">High Priority</h1>
+        <h1 id="highPriority" class="text-[15vh] space-grotesk font-extrabold text-gray-200">0</h1>
+      </div>
+       <div class="card3 bg-gradient-to-b from-yellow-400 to-#C5D7C7 w-[18%] h-[32vh] p-5 ml-[3.2vw] rounded-[8px] shadow-[8px_-7px_12px_rgba(0,0,0,0.25)]" >
+        <h1 class="text-2xl space-grotesk text-gray-700">Pending Tasks</h1>
+        <h1 id="pendingTasks" class="text-[15vh] space-grotesk font-extrabold text-gray-700">0</h1>
+      </div>
+      <div class="form ml-[5vw] mt-[-17vh] flex justify-center align-middle gap-7 flex-col">
+        <input type="text" placeholder="Enter Task Title" id="title" class="bg-gray-50 p-5 px-20 text-[1.2vw] space-grotesk rounded-[5px]" required>
+        <select name="Priority" id="priority" class="p-3 rounded-[5px] space-grotesk text-center" required>
+          <option selected disabled value="">Select Priority</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+        <button id="addTaskBtn" class= "bg-gradient-to-b from-green-400 p-4 rounded-[8px] space-grotesk text-[1.1vw] cursor-pointer transition-all 0.2s hover:bg-green-500 transform translate-y-[-5px]">Add Task</button>
+        <div class="workflow bg-gradient-to-b from-gray-700 p-5 text-white mt-[4vh] rounded-[8px] leading-[6vh]">
+          <h1 class="space-grotesk text-[1.8vw]">Workflow</h1>
+          <h2 class="space-grotesk text-[1.2vw]">Maximum 3 tasks holding at once</h2>
+          <h1 class="space-grotesk text-[1.3vw]" >Total tasks in workflow: <span id="totalTasks" class="text-2xl text-yellow-300">0</span> </h1>
+          <p id="start"></p>
+          <p id="complete"></p>
+          <button class="text-gray-900 bg-green-400 p-2 px-[3vw] rounded-[8px] space-grotesk text-[1.2vw] cursor-pointer transition-all 0.2s mt-[2vh] hover:bg-green-300 transform translate-y-[-5px]" id="executeBtn">Execute Workflow</button>
+        </div>
+      </div>
+    </div>
+    <div class="taskList mt-[2vh] p-5 px-[4vw] w-full">
+  <h1 class="text-[2vw] space-grotesk text-gray-700">
+    All Tasks <span class="text-[1.1vw]">[scroll down]</span>
+  </h1>
+
+  <div id="taskList" class="mt-[3vh] grid grid-cols-3 gap-5">
+  </div>
+</div>
+    <script src="app.js"></script>
+  </body>
+</html>
