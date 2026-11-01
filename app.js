@@ -192,7 +192,7 @@ function flowState() {
       copyArray.push(...workFlowArray);
       copyArray.forEach(task => {
         const card = document.createElement("div");
-        card.className = "bg-amber-400 w-[50%] min-w-0 min-h-[15vh] p-4 space-grotesk rounded-lg shadow-md break-words leading-[4vh]";
+        card.className = "bg-amber-400 w-[50%] min-w-0 min-h-[15vh] p-4 space-grotesk rounded-lg shadow-md break-words leading-[4vh] capitalize";
 
         const title = document.createElement("h1");
         title.className = "font-bold";
