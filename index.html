@@ -22,15 +22,15 @@
       </h2>
     </div>
     <div class="dashboardCard flex justify-start align-middle">
-      <div class="card1 bg-gradient-to-b from-orange-600 to-#C5D7C7 w-[18%] h-[32vh] p-5 ml-[3.1vw] rounded-[8px] shadow-[8px_-7px_12px_rgba(0,0,0,0.25)]">
-        <h1 class="text-2xl space-grotesk ">Total Tasks</h1>
-        <h1 id="totalTasksdash" class="text-[15vh] space-grotesk font-extrabold">0</h1>
+      <div class="card1 bg-gradient-to-b from-[#c7fdc0] to-[#C5D7C7] w-[18%] h-[32vh] p-5 ml-[3.1vw] rounded-[8px] shadow-[8px_-7px_12px_rgba(0,0,0,0.25)]">
+        <h1 class="text-2xl space-grotesk text-gray-700">Total Tasks</h1>
+        <h1 id="totalTasksdash" class="text-[15vh] space-grotesk font-extrabold text-gray-700">0</h1>
       </div>
-      <div class="card2 bg-gradient-to-b from-red-700 to-#C5D7C7 w-[18%] h-[32vh] p-5 ml-[3.2vw] rounded-[8px] shadow-[8px_-7px_12px_rgba(0,0,0,0.25)]" >
-        <h1 class="text-2xl space-grotesk text-gray-100">High Priority</h1>
-        <h1 id="highPriority" class="text-[15vh] space-grotesk font-extrabold text-gray-200">0</h1>
+      <div class="card2 bg-gradient-to-b from-[#fd8d83] to-[#C5D7C7] w-[18%] h-[32vh] p-5 ml-[3.2vw] rounded-[8px] shadow-[8px_-7px_12px_rgba(0,0,0,0.25)]" >
+        <h1 class="text-2xl space-grotesk text-gray-700">Critical Priority</h1>
+        <h1 id="highPriority" class="text-[15vh] space-grotesk font-extrabold text-gray-700">0</h1>
       </div>
-       <div class="card3 bg-gradient-to-b from-yellow-400 to-#C5D7C7 w-[18%] h-[32vh] p-5 ml-[3.2vw] rounded-[8px] shadow-[8px_-7px_12px_rgba(0,0,0,0.25)]" >
+       <div class="card3 bg-gradient-to-b from-[#fcdb80] to-[#C5D7C7] w-[18%] h-[32vh] p-5 ml-[3.2vw] rounded-[8px] shadow-[8px_-7px_12px_rgba(0,0,0,0.25)]" >
         <h1 class="text-2xl space-grotesk text-gray-700">Pending Tasks</h1>
         <h1 id="pendingTasks" class="text-[15vh] space-grotesk font-extrabold text-gray-700">0</h1>
       </div>
@@ -38,6 +38,7 @@
         <input type="text" placeholder="Enter Task Title" id="title" class="bg-gray-50 p-5 px-20 text-[1.2vw] space-grotesk rounded-[5px]" required>
         <select name="Priority" id="priority" class="p-3 rounded-[5px] space-grotesk text-center" required>
           <option selected disabled value="">Select Priority</option>
+          <option value="Critical">Critical</option>
           <option value="High">High</option>
           <option value="Medium">Medium</option>
           <option value="Low">Low</option>

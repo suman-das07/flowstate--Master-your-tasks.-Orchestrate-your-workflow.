@@ -207,17 +207,21 @@ function flowState() {
         card.append(title, priority, status);
         taskLists.append(card);
 
+        if (task.priority === "Critical") {
+          card.style.backgroundColor = "#7F2938";
+          card.style.color = "#FFFFFF";
+        }
         if (task.priority === "High") {
-          card.style.backgroundColor = "red";
-          card.style.color = "white";
+          card.style.backgroundColor = "#F5DEDC";
+          card.style.color = "#783B36";
         }
         else if (task.priority === "Medium") {
-          card.style.backgroundColor = "yellow";
-          card.style.color = "black";
+          card.style.backgroundColor = "#F4E8C8";
+          card.style.color = "#70531F";
         }
         else if (task.priority === "Low") {
-          card.style.backgroundColor = "green";
-          card.style.color = "white";
+          card.style.backgroundColor = "#DCE9D8";
+          card.style.color = "#365638";
         }
         // console.log(task.priority);
       })
@@ -228,7 +232,7 @@ function flowState() {
     dashboardUi: function () {
       document.querySelector("#totalTasksdash").textContent = `${copyArray.length}`;
       let filteredPriority = copyArray.filter(getPriority => {
-        return getPriority.priority === "High";
+        return getPriority.priority === "Critical";
       });
       let priorityCount = filteredPriority.length;
       document.querySelector("#highPriority").textContent = `${priorityCount}`;
